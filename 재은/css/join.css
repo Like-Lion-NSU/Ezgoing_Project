@@ -1,0 +1,117 @@
+.logo{
+    margin:0 auto;
+    width:300px;
+    height: 100px;
+    background-image: url("../img/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: cover;
+}
+.logo a{
+    width:300px;
+    height:100px;
+    display: block;
+}
+label{
+    cursor: pointer;
+}
+#join{
+    display: flex;
+    justify-content: center;
+}
+table{
+    display: flex;
+    justify-content: center;
+    border-collapse: separate;
+    border-spacing: 0 30px;
+}
+th{
+    text-align: left;
+}
+tr th{
+    width:150px;
+}
+.id, .pass, .name, .email{
+    border:2px solid var(--lightgray-color);
+    border-radius: 5px;
+    width:370px;
+    height:45px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.idtext, .passtext, .nametext, .emailtext{
+    width:335px;
+    height:30px;
+    border:none;
+    margin-left: 10px;
+}
+.pass i{
+    margin-right: 15px;
+    color:var(--darkgray-color)
+}
+.idtext:focus, .passtext:focus, .nametext:focus, .emailtext:focus, .year:focus, .day:focus, #numMid, #numLst{
+    outline: none;
+}
+#birth{
+    display: flex;
+}
+.birth, .date{
+    width:120px;
+    height:45px;
+    padding:0px;
+    border:2px solid var(--lightgray-color);
+    border-radius:5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.phmid, .phlst, .phfst{
+    width:110px;
+    height:45px;
+    padding:0px;
+    border:2px solid var(--lightgray-color);
+    border-radius:5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.year, .day, #numMid, #numLst{
+    width:80px;
+    height:30px;
+    border:none;
+    margin-left: 5px;
+}
+.month{
+    width:120px;
+    height:45px;
+    border:2px solid var(--lightgray-color);
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.submit{
+    width:523px;
+    height: 45px;
+    background-color: var(--logo-color);
+    border-radius: 10px;
+    border:none;
+    color:white;
+    font-size:18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+.phone1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    color:var(--lightgray-color);
+    align-items: center;
+}
