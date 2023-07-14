@@ -15,6 +15,7 @@ body{
     margin:0;
     font-family: 'Noto Sans KR', sans-serif;
     font-family: 'Roboto', sans-serif;
+    color:var(--darkgray-color)
 }
 a{
     text-decoration: none;

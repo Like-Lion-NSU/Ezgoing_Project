@@ -12,12 +12,30 @@
     height:100px;
     display: block;
 }
+.success{
+    color:var(--logo-color) !important;
+}
+.fail{
+    color:red !important;
+}
+.inputSuccess{
+    border: 2px solid var(--logo-color) !important;
+    outline:none;
+}
+.inputFail{
+    border: 2px solid red !important;
+    outline:none;
+}
 label{
     cursor: pointer;
 }
 #join{
     display: flex;
     justify-content: center;
+}
+#joinInner{
+    width:500px;
+    margin: 0 auto;
 }
 table{
     display: flex;
@@ -31,7 +49,7 @@ th{
 tr th{
     width:150px;
 }
-.id, .pass, .name, .email{
+.id, .pass,.pass2, .name, .email{
     border:2px solid var(--lightgray-color);
     border-radius: 5px;
     width:370px;
@@ -46,15 +64,17 @@ tr th{
     border:none;
     margin-left: 10px;
 }
-.pass i{
+.pass i,.pass2 i, .id i{
     margin-right: 15px;
     color:var(--darkgray-color)
 }
 .idtext:focus, .passtext:focus, .nametext:focus, .emailtext:focus, .year:focus, .day:focus, #numMid, #numLst{
     outline: none;
 }
-#birth{
+#birth, .phone1{
     display: flex;
+    width:370px;
+    justify-content: space-between;
 }
 .birth, .date{
     width:120px;
@@ -91,10 +111,9 @@ tr th{
     height:45px;
     border:2px solid var(--lightgray-color);
     border-radius: 5px;
-    margin: 0 5px;
 }
 .submit{
-    width:523px;
+    width:500px;
     height: 45px;
     background-color: var(--logo-color);
     border-radius: 10px;
@@ -103,6 +122,7 @@ tr th{
     font-size:18px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 20px;
 }
 section{
     display: flex;
@@ -114,4 +134,14 @@ section{
     font-size: 25px;
     color:var(--lightgray-color);
     align-items: center;
+}
+#flexId, #flexPass, #flexPass2, #flexName, #flexBirth, #flexEmail, #flexPhone{
+    display: flex;
+    justify-content: space-between;
+    margin:15px 0;
+    align-items: center;
+}
+p{
+    margin:0;
+    font-size: var(--font-small);
 }
