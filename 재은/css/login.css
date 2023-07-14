@@ -1,32 +1,3 @@
-:root{
-    --white-color:#fff;
-    --black-color:black;
-    --lightgray-color:#d2d2d2;
-    --darkgray-color:#6e6e6e;
-    --logo-color:#41CC93;
-
-    --font-large:18px;
-    --font-medium:14px;
-    --font-small:12px;
-    --font-micro:10px;
-}
-body{
-    padding:0;
-    margin:0;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
-}
-a{
-    text-decoration: none;
-}
-a:hover{
-    text-decoration:underline;
-}
-.container{
-    max-width: 1020px;
-    margin:0 auto;
-}
-
 .logo{
     margin:0 auto;
     width:300px;
