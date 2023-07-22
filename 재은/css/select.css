@@ -1,0 +1,107 @@
+.btn{
+    display: flex;
+    justify-content: center;
+}
+h3{
+  margin:10px 0;  
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top:15px;
+}
+.select{
+    margin:0 auto;
+    width:400px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:var(--font-medium);
+}
+.selectInner{
+    width:340px;
+}
+.innerSearch{
+    border:none;
+    width:280px;
+}
+.innerSearch:focus{
+    outline:none;
+}
+.search{
+    width:340px;
+    border:2px solid var(--lightgray-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; 
+}
+.search i{
+    margin-right:10px;
+}
+#plusMinus{
+    display: flex;
+    align-items: center;
+}
+#minus, #plus{
+    border:none;
+    background-color: white;
+    font-size:var(--font-medium);
+    font-weight: bold;
+    margin:0 2px;
+}
+input[tyoe=time]{
+    width:150px;
+}
+
+.selectBtnInner{
+    margin-top:15px;
+     display: flex;
+     justify-content: space-between;
+}
+.selectBtnInner button{
+    padding:4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.selectBtnInner i{
+    margin-right: 5px;
+}
+.reset{
+    border:2px solid red;
+    background-color: white;
+}
+.reset i{
+    color:red;
+}
+.submit{
+    background-color: var(--logo-color);
+    border:none;
+    color:white;
+}
+.selectContainer {
+    position: fixed; /* 화면 스크롤에 영향받지 않도록 fixed로 설정 */
+    top: 50%; /* 화면 상단으로부터 50% 위치에 배치 */
+    left: 50%; /* 화면 왼쪽으로부터 50% 위치에 배치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위해 transform 사용 */
+    position: absolute; 
+    visibility: hidden;
+    transition: .4s;
+    opacity: 0;
+    width: 400px;
+    height: 250px;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 (변경 가능) */
+    z-index: 999; 
+  }
+  
+  .selectContainer.show { 
+    visibility: visible; 
+    opacity: 1;
+  }
