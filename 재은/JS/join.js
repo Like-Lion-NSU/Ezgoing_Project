@@ -246,3 +246,42 @@ $inputEmail.addEventListener("change",EMAIL_CHECK);
 $inputNum1.addEventListener("change", NUM1_CHECK);
 $inputNum2.addEventListener("change", NUM2_CHECK);
 $inputNum3.addEventListener("change", NUM3_CHECK);
+
+//값 보내기
+// $submitBtn=document.querySelector('.submit');
+
+// $submitBtn.addEventListener("click",register);
+// function register() {
+//     const req = {
+//         id: $inputId.value,
+//         pass: $inputPass.value,
+//         pass2: $inputPass2.value,
+//         name: $inputName.value,
+//         year: $inputYear.value,
+//         month: $inputMonth.value,
+//         date: $inputDay.value,
+//         email: $inputEmail.value,
+//         num1: $inputNum1.value,
+//         num2: $inputNum2.value,
+//         num3: $inputNum3.value,
+//     };
+
+//     fetch("백엔드_URL", {
+//         method: "POST", // 요청 메서드 
+//         body: JSON.stringify(req) // 전송할 데이터
+//     })
+//     .then(response => response.json()) // 백엔드로부터 받은 응답을 JSON 형식으로 파싱
+//     .then(data => {
+//         // 백엔드로부터 받은 응답에 대한 처리
+//         console.log(data); // 예시로 받은 데이터를 콘솔에 출력
+//     })
+//     .catch(error => {
+//         // 에러 처리
+//         console.error("Error:", error);
+//     });
+// }
+
+// document.getElementById("joinForm").addEventListener("submit", function(event) {
+//     event.preventDefault(); // 이벤트 기본 동작 방지 (페이지 새로고침)
+//     register(); // register 함수 호출
+// });

@@ -26,13 +26,13 @@
         <div class="logo">
             <a href="index.html"></a>
         </div>
-        <form>
+        <form action="/sign-in" method="post">
             <div id="login">
                 <div class="login">
                     <div class="login_id"><i class="fa-solid fa-user"></i><input type="text" class="login_input_id"
-                            placeholder="아이디" required></div>
+                            placeholder="아이디" name="id" required></div>
                     <div class="login_pass"><i class="fa-solid fa-lock"></i><input
-                            type="password" class="login_input_pass" placeholder="비밀번호 ( 영문 대/소문자+숫자+특수문자 )" required></div>
+                            type="password" class="login_input_pass" placeholder="비밀번호 ( 영문 대/소문자+숫자+특수문자 )" name="password" required></div>
                             <div class="login_bottom">
                                 <input type="checkbox" id="chk"><label for="chk"><span></span>아이디 저장</label>
                                 <div class="login_bot_right">
