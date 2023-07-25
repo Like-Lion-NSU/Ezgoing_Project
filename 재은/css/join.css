@@ -49,7 +49,7 @@ th{
 tr th{
     width:150px;
 }
-.id, .pass,.pass2, .name, .email{
+.id, .pass,.pass2, .name, .email, .birth, .num{
     border:2px solid var(--lightgray-color);
     border-radius: 5px;
     width:370px;
@@ -58,7 +58,7 @@ tr th{
     align-items: center;
     box-sizing: border-box;
 }
-.idtext, .passtext, .nametext, .emailtext{
+.idtext, .passtext, .nametext,.birthtext, .emailtext, .numtext{
     width:335px;
     height:30px;
     border:none;
@@ -68,49 +68,8 @@ tr th{
     margin-right: 15px;
     color:var(--darkgray-color)
 }
-.idtext:focus, .passtext:focus, .nametext:focus, .emailtext:focus, .year:focus, .day:focus, #numMid, #numLst{
+.idtext:focus, .passtext:focus, .nametext:focus,.birthtext:focus, .emailtext:focus,.numtext:focus{
     outline: none;
-}
-#birth, .phone1{
-    display: flex;
-    width:370px;
-    justify-content: space-between;
-}
-.birth, .date{
-    width:120px;
-    height:45px;
-    padding:0px;
-    border:2px solid var(--lightgray-color);
-    border-radius:5px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-}
-.phmid, .phlst, .phfst{
-    width:110px;
-    height:45px;
-    padding:0px;
-    border:2px solid var(--lightgray-color);
-    border-radius:5px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-}
-.year, .day, #numMid, #numLst{
-    width:80px;
-    height:30px;
-    border:none;
-    margin-left: 5px;
-}
-.month{
-    width:120px;
-    height:45px;
-    border:2px solid var(--lightgray-color);
-    border-radius: 5px;
 }
 .submit{
     width:500px;

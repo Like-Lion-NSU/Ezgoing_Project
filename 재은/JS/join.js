@@ -13,24 +13,15 @@ const lockIcon = document.querySelector(".fa-lock")
 const $inputName= document.querySelector("#name")
 const $className= document.querySelector(".name")
 
-const $inputYear = document.querySelector("#year")
-const $classYear= document.querySelector(".birth")
-
-const $inputMonth = document.querySelector(".month")
-
-const $inputDay = document.querySelector(".day")
-const $classDate= document.querySelector(".date")
+const $inputBirth = document.querySelector("#birth")
+const $classBirth= document.querySelector(".birth")
 
 const $inputEmail = document.querySelector("#email")
 const $classEmail= document.querySelector(".email")
 
-const $inputNum1 = document.querySelector(".phfst")
+const $inputPhone = document.querySelector("#phone")
+const $classPhone= document.querySelector(".num")
 
-const $inputNum2 = document.querySelector("#numMid")
-const $classNum2= document.querySelector(".phmid")
-
-const $inputNum3 = document.querySelector("#numLst")
-const $classNum3= document.querySelector(".phlst")
 
 const text0 = document.createElement('p');
 const text1 = document.createElement('p');
@@ -117,58 +108,21 @@ function NAME_CHECK(event){
         $className.classList.add('inputSuccess');
     }
 }
-function YEAR_CHECK(event){
-    var regYear = /^\d{4}$/;
-    if(regYear.test(event.target.value)===false){
-        text4.textContent='태어난 년도 4자리를 정확하게 입력하세요.'
+function BIRTH_CHECK(event){
+    var regBirth = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2]\d|3[0-1])$/;
+    if(regBirth.test(event.target.value)===false){
+        text4.textContent = 'YYMMDD/생년월일 6글자를 바르게 입력해주세요.'
         text4.style.color = 'red'
         block_4.appendChild(text4)
-        $classYear.classList.add('inputFail');
+        $classBirth.classList.add('inputFail')
     }
     else{
         text4.remove()
-        $classYear.classList.remove('inputFail');
-        $classYear.classList.add('inputSuccess');
-        MONTH_CHECK()
+        $classBirth.classList.remove('inputFail');
+        $classBirth.classList.add('inputSuccess');
     }
 }
-function MONTH_CHECK(event){
-    const monthValue=$inputMonth.value;
-    if(monthValue==='월'){
-        text4.textContent='태어난 월을 선택하세요.'
-        text4.style.color = 'red'
-        block_4.appendChild(text4)
-        $inputMonth.classList.add('inputFail');
-    }
-    else{
-        text4.remove()
-        $inputMonth.classList.remove('inputFail');
-        $inputMonth.classList.add('inputSuccess');
-        DAY_CHECK()
-        $inputDay.focus(); 
-    }
-}
-function DAY_CHECK(event){
-    const dayValue = $inputDay.value;
-    var regDay=/^\d{1,2}$/;
-    if(dayValue===''){
-        text4.textContent='태어난 일(날짜) 2자리를 정확하게 입력하세요.'
-        text4.style.color = 'red'
-        block_4.appendChild(text4)
-        $classDate.classList.add('inputFail');
-    }
-    else if(regDay.test(event.target.value)===false){
-        text4.textContent='생년월일을 다시 확인해주세요.'
-        text4.style.color = 'red'
-        block_4.appendChild(text4)
-        $classDate.classList.add('inputFail');
-    }
-    else{
-        $classDate.classList.remove('inputFail');
-        $classDate.classList.add('inputSuccess');
-        text4.remove()
-    }
-}
+
 function EMAIL_CHECK(event){
     var regEmail=/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/;
     if(regEmail.test(event.target.value)===false){
@@ -182,70 +136,28 @@ function EMAIL_CHECK(event){
         $classEmail.classList.add('inputSuccess');
     }
 }
-
-function NUM1_CHECK(event){
-    const numValue=$inputNum1.value;
-    if(numValue==='번호 선택'){
-        text6.textContent='지역 코드를 선택하세요.'
+function PHONE_CHECK(event){
+    var regPhone=/^01(0|1|6|7|8|9)-\d{3,4}-\d{4}$/;
+    if(regPhone.test(event.target.value)===false){
+        text6.textContent = '휴대 전화 번호( - 하이픈 포함)를 다시 확인해주세요.'
         text6.style.color = 'red'
         block_6.appendChild(text6)
-        $inputNum1.classList.add('inputFail');
-    }
-    else{
-        text6.remove()
-        $inputNum1.classList.remove('inputFail');
-        $inputNum1.classList.add('inputSuccess');
-        NUM2_CHECK()
-        $inputNum2.focus(); // inputNum2에 자동으로 포커스 설정
-    }
-}
-function NUM2_CHECK(event){
-    const numValue = $inputNum2.value;
-    var regNumMid = /^\d{3,4}$/;
-    if (regNumMid.test(numValue) === false) {
-        text6.textContent='가운데 번호 3~4자리를 정확하게 입력해주세요.'
-        text6.style.color = 'red'
-        block_6.appendChild(text6)
-        $classNum2.classList.add('inputFail');
-    }
-    else{
-        text6.remove()
-        $classNum2.classList.remove('inputFail');
-        $classNum2.classList.add('inputSuccess');
-        NUM3_CHECK()
-        $inputNum3.focus(); // inputNum3에 자동으로 포커스 설정
-    }
-}
-function NUM3_CHECK(event) {
-    const numValue = $inputNum3.value;
-    var regNumLst = /^\d{4}$/;
-    if (numValue === '') {
-        text6.textContent = '마지막 번호 4자리를 정확하게 입력하세요.';
-        text6.style.color = 'red';
-        block_6.appendChild(text6);
-        $classNum3.classList.add('inputFail');
-    } else if (regNumLst.test(numValue) === false) {
-        text6.textContent = '휴대전화 번호를 다시 확인해주세요.';
-        text6.style.color = 'red';
-        block_6.appendChild(text6);
-        $classNum3.classList.add('inputFail');
+        $classPhone.classList.add('inputFail');
     } else {
-        $classNum3.classList.remove('inputFail');
-        $classNum3.classList.add('inputSuccess');
-        text6.remove();
+        text6.remove()
+        $classPhone.classList.remove('inputFail');
+        $classPhone.classList.add('inputSuccess');
     }
 }
+
 $inputId.addEventListener("change", ID_CHECK)
 $inputPass.addEventListener("change", PWD_CHECK)
 $inputPass2.addEventListener("change", PWD_RECHECK)
 $inputName.addEventListener("change", NAME_CHECK)
-$inputYear.addEventListener("change",YEAR_CHECK)
-$inputMonth.addEventListener("change", MONTH_CHECK);
-$inputDay.addEventListener("change", DAY_CHECK);
+$inputBirth.addEventListener("change", BIRTH_CHECK)
 $inputEmail.addEventListener("change",EMAIL_CHECK);
-$inputNum1.addEventListener("change", NUM1_CHECK);
-$inputNum2.addEventListener("change", NUM2_CHECK);
-$inputNum3.addEventListener("change", NUM3_CHECK);
+$inputPhone.addEventListener("change", PHONE_CHECK);
+
 
 //값 보내기
 // $submitBtn=document.querySelector('.submit');

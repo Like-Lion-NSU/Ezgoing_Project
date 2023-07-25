@@ -66,35 +66,15 @@
                 </div>
                 <div class="flexBirth">
                 <div id="flexBirth">
-                    <label for="year">생년월일</label>
-                    <div id="birth">
-                        <div class="birth">
-                            <input type="text" placeholder=" 년(4자)" class="year" id="year" maxlength="4" required>
-                        </div>
-                        <select class="month" required>
-                            <option  disabled selected hidden>월</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                        </select>
-                        <div class="date">
-                            <input type="text" placeholder=" 일" class="day" maxlength="2" required><br>
-                        </div>
+                    <label for="birth">생년월일</label>
+                    <div class="birth">
+                        <input type="text" class="birthtext" id="birth" placeholder="생년월일 6자리를 입력해주세요." maxlength="6"  required>
                     </div>
                 </div>
             </div>
             <div class="flexEmail">
                 <div id="flexEmail">
-                    <label for="email">본인 확인 이메일</label>
+                    <label for="email">이메일</label>
                     <div class="email">
                         <input type="email" placeholder="이메일" class="emailtext" id="email" required><br>
                     </div>
@@ -103,25 +83,8 @@
             <div class="flexPhone">
                 <div id="flexPhone">
                     <label for="phone">휴대전화</label>
-                    <div class="phone1">
-                        <select class="phfst" required>
-                            <option  disabled selected hidden>번호 선택</option>
-                            <option>010</option>
-                            <option>011</option>
-                            <option>0130</option>
-                            <option>016</option>
-                            <option>017</option>
-                            <option>018</option>
-                            <option>019</option>
-                        </select>
-                        -
-                        <div class="phmid">
-                            <input type="text" id="numMid" maxlength="4" required>
-                        </div>
-                        -
-                        <div class="phlst">
-                            <input type="text" id="numLst" maxlength="4" required>
-                        </div>
+                    <div class="num">
+                        <input type="text" class="numtext" id="phone" placeholder="010-1234-5678" required>
                     </div>
                 </div>
             </div>
