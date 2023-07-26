@@ -1,21 +1,21 @@
-package com.example.demo.controller;
-
-import com.example.demo.Service.FestivalService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
-@Controller
-@RequiredArgsConstructor
-public class FestivalController {
-
-    private final FestivalService festivalService;
-    @GetMapping("/festivals") //축제 리스트 가져오기
-    public String getFestivalList(Model model) {
-        model.addAttribute("festivals", festivalService.getFestivals());
-        return "festivalList";
-    }
+//package com.example.demo.controller;
+//
+//import com.example.demo.Service.FestivalService;
+//import lombok.RequiredArgsConstructor;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.ui.Model;
+//import org.springframework.web.bind.annotation.GetMapping;
+//
+//@Controller
+//@RequiredArgsConstructor
+//public class FestivalController {
+//
+//    private final FestivalService festivalService;
+//    @GetMapping("/festivals") //축제 리스트 가져오기
+//    public String getFestivalList(Model model) {
+//        model.addAttribute("festivals", festivalService.getFestivals());
+//        return "festivalList";
+//    }
     //
 //    @GetMapping("/festivals/{festivalId}")
 //    public String getFestivalDetail(@PathVariable int festivalId, Model model) {
@@ -27,4 +27,4 @@ public class FestivalController {
 //        model.addAttribute("festival", festival);
 //        return "festivalDetail";
 //    }
-}
+//}
